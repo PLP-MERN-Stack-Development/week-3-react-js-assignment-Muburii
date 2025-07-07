@@ -1,12 +1,17 @@
-import Navbar from "./navbar";
-import Footer from "./Footer";
+import { Outlet } from "react-router-dom";
+import Navbar from './Navbar';
+import Footer from './Footer';
 
-export default function Layout({ children }) {
+function Layout() {
   return (
-    <div className="flex flex-col min-h-screen dark:bg-black dark:text-white">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-blue-50 via-white to-blue-100 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 transition-colors duration-300">
       <Navbar />
-      <main className="flex-grow p-4">{children}</main>
+      <main className="flex-1 flex flex-col justify-center items-center px-4 sm:px-8 py-8 w-full">
+        <Outlet />
+      </main>
       <Footer />
     </div>
   );
 }
+
+export default Layout;

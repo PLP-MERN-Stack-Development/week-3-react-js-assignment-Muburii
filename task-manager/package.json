@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
-    "daisyui": "^5.0.43",
     "date-fns": "^4.1.0",
     "proptypes": "^1.1.0",
     "react": "^19.1.0",
