@@ -30,35 +30,6 @@ function Navbar() {
 
       {/* Navigation Links */}
       <div className={`flex-col sm:flex-row sm:flex gap-8 items-center absolute sm:static top-16 left-0 w-full sm:w-auto bg-white/95 dark:bg-gray-900/95 sm:bg-transparent sm:dark:bg-transparent shadow-lg sm:shadow-none transition-all duration-300 z-40 ${menuOpen ? "flex" : "hidden sm:flex"}`}>
-        {/* Home */}
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            `font-semibold px-4 py-2 rounded-lg transition text-lg block sm:inline-block ${
-              isActive
-                ? "bg-blue-600 text-white dark:bg-blue-400 dark:text-gray-900 shadow"
-                : "text-gray-700 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-gray-800"
-            }`
-          }
-          onClick={() => setMenuOpen(false)}
-        >
-          Home
-        </NavLink>
-
-        {/* About */}
-        <NavLink
-          to="/about"
-          className={({ isActive }) =>
-            `font-semibold px-4 py-2 rounded-lg transition text-lg block sm:inline-block ${
-              isActive
-                ? "bg-blue-600 text-white dark:bg-blue-400 dark:text-gray-900 shadow"
-                : "text-gray-700 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-gray-800"
-            }`
-          }
-          onClick={() => setMenuOpen(false)}
-        >
-          About
-        </NavLink>
 
         {/* API */}
         <NavLink
@@ -95,7 +66,7 @@ function Navbar() {
           className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-5 py-2 rounded-lg shadow hover:bg-gray-300 dark:hover:bg-gray-600 transition font-semibold text-lg mt-2 sm:mt-0"
           onClick={toggleTheme}
         >
-          {theme === "light" ? "🌙 Dark" : "☀️ Light"}
+          {theme === "light" ? "🌙 " : "☀️ "}
         </button>
       </div>
     </nav>
